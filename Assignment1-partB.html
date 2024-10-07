@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Muhammad Ahmad Arshad - Web Developer & CS Enthusiast">
+    <meta name="keywords" content="Portfolio, Web Development, CS, Projects, Skills">
+    <meta name="author" content="Muhammad Ahmad Arshad">
+    <title>Muhammad Ahmad Arshad | Professional Profile</title>
+    
+   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c0d6e4;
+            color: #333;
+        }
+
+        nav {
+            background-color: #000000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .nav-title {
+            color: rgb(255, 255, 255);
+            margin-left: 20px;
+            font-size: 24px;
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 28px;
+            margin-right: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #9ccae1;
+        }
+
+        .lang-buttons {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .lang-buttons button {
+            margin: 5px;
+            padding: 12px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: #000000;
+            color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        } 
+
+        .lang-buttons button:hover {
+            background-color: #9ca3a3;
+            transform: scale(1.2);
+        }
+
+        section {
+            padding: 25px;
+            background-color: rgb(255, 255, 255);
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 1000px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #222;
+            font-family: 'Arial', sans-serif;
+        }
+
+        ul.skill-list, ul.project-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul.skill-list li, ul.project-list li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 320px;
+            border-radius: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons li {
+            list-style-type: none;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            color: #005f73;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #94d2bd;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 10px 0;
+        }
+
+        .connect-with-me {
+            margin-top: 20px;
+        }
+
+        .connect-with-me h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .connect-with-me ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .connect-with-me ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .connect-with-me ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .connect-with-me ul li a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                background-color: #005f73;
+                transition: left 0.3s ease-in-out;
+            }
+
+            nav ul.show {
+                left: 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-title">Muhammad Ahmad Arshad</div>
+        <i class='bx bx-menu nav-toggle' id="nav-toggle"></i>
+        <ul id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#degree">Education</a></li>
+            <li><a href="#video">Media</a></li>
+            <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="lang-buttons">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ar')">عربى (Arabic)</button>
+        <button onclick="setLanguage('ur')">اردو (Urdu)</button>
+        <button onclick="setLanguage('fr')">Français (French)</button>
+    </div>
+
+    <section id="home">
+        <h1 id="welcome-message">Welcome to Muhammad Ahmad Arshad's Portfolio</h1>
+        <p id="welcome-description">A glimpse into my journey as a developer and problem solver.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Core Skills</h2>
+        <h3>Technical Expertise</h3>
+        <ul id="technical-skills" class="skill-list"></ul>
+        <h3>Personal Skills</h3>
+        <ul id="personal-skills" class="skill-list"></ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul id="projects" class="project-list"></ul>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <ul id="experience" class="project-list"></ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Awards & Certifications</h2>
+        <ul id="certifications" class="project-list"></ul>
+    </section>
+
+    <section id="degree">
+        <h2>Education</h2>
+        <p id="education"></p>
+    </section>
+
+    <section id="video">
+        <h2>Watch My Work</h2>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/Jmmktb9tbi8" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+
+    </section>
+
+    <!--<section id="social">
+        <h2>Connect with Me</h2>
+        <ul id="social-media" class="social-icons"></ul>
+    </section> -->
+
+    <!-- <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:bscs22135@itu.edu.pk">bscs22135@itu.edu.pk</a></p>
+    </section> -->
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Muhammad Ahmad Arshad. All rights reserved.</p>
+
+            <div class="connect-with-me">
+                <h3>Connect with Me</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/muhammad-arshad" target="_blank">GitHub</a></li>
+                    <li><a href="mailto:bscs22135@itu.edu.pk">Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const profileData = {
+            name: "Muhammad Ahmad Arshad",
+            email: "bscs22135@itu.edu.pk",
+            education: {
+                degree: "Bachelor of Science in Computer Science",
+                university: "Information Technology University (ITU), Lahore",
+                expectedGraduation: "2026"
+            },
+            skills: {
+                technical: [
+                    "HTML & CSS",
+                    "JavaScript & Frameworks",
+                    "Python & Data Science",
+                    "MySQL & Databases",
+                    "Machine Learning"
+                ],
+                personal: [
+                    "Problem Solving",
+                    "Time Management",
+                    "Collaboration",
+                    "Public Speaking"
+                ]
+            },
+            projects: [
+                { name: "Multi-Player Ludo Game", description: "A digital Ludo game built with C++ and SFML." },
+                { name: "Paint Brush Application", description: "A drawing app created with Python and Tkinter." },
+                { name: "Chess Game", description: "A chess game developed using C++ and OOP principles." },
+                { name: "Gomoku Game", description: "A two-player Gomoku game built in C++." },
+                { name: "Machine Learning Projects", description: "Involved in some machine learning projects." }
+            ],
+            experience: [
+                { title: "Web Developer Intern", company: "iTitans Pvt. Ltd.", description: "Created frontend UIs for client websites." },
+                { title: "Machine Learning Intern", company: "Research Assistant", description: "Worked on supervised learning models for NLP." }
+            ],
+            certifications: [
+                { name: "Deep Learning Specialization", description: "Completed Deep Learning Specialization by Andrew Ng." },
+                { name: "Python for Everybody", description: "Completed Python for Everybody course by Coursera." },
+                { name: "Machine Learning", description: "Certified in Machine Learning by Stanford University." }
+            ],
+            socialMedia: {
+                github: "https://github.com/muhammad-arshad",
+                reddit: "https://www.reddit.com/r/redditdev/comments/mnghl9/my_newest_project/"
+            }
+        };
+
+        const languageContent = {
+            en: {
+                welcome: "Welcome to Muhammad Ahmad Arshad's Portfolio",
+                description: "A glimpse into my journey as a developer and problem solver."
+            },
+            ar: {
+                welcome: "مرحبًا بك في محفظة محمد أحمد أرشاد",
+                description: "نظرة عامة على مسيرتي كمطور ومحلل مشكلات"
+            },
+            ur: {
+                welcome: "محمد احمد ارشد کے پورٹ فولیو میں خوش آمدید",
+                description: "ایک نظر میری بطور ڈویلپر اور مسائل حل کرنے والے کی سفر پر"
+            },
+            fr: {
+                welcome: "Bienvenue dans le portfolio de Muhammad Ahmad Arshad",
+                description: "Un aperçu de mon parcours en tant que développeur et résolveur de problèmes."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById("welcome-message").innerText = languageContent[lang].welcome;
+            document.getElementById("welcome-description").innerText = languageContent[lang].description;
+        }
+
+        function populateProfile() {
+            const technicalSkills = profileData.skills.technical.map(skill => `<li>${skill}</li>`).join("");
+            const personalSkills = profileData.skills.personal.map(skill => `<li>${skill}</li>`).join("");
+            document.getElementById("technical-skills").innerHTML = technicalSkills;
+            document.getElementById("personal-skills").innerHTML = personalSkills;
+
+            const projects = profileData.projects.map(project => `<li><strong>${project.name}:</strong> ${project.description}</li>`).join("");
+            document.getElementById("projects").innerHTML = projects;
+
+            const experience = profileData.experience.map(exp => `<li><strong>${exp.title}:</strong> ${exp.description}</li>`).join("");
+            document.getElementById("experience").innerHTML = experience;
+
+            const certifications = profileData.certifications.map(cert => `<li><strong>${cert.name}:</strong> ${cert.description}</li>`).join("");
+            document.getElementById("certifications").innerHTML = certifications;
+
+            const education = `${profileData.education.degree} at ${profileData.education.university}, expected graduation in ${profileData.education.expectedGraduation}`;
+            document.getElementById("education").innerHTML = education;
+
+            const socialMediaLinks = `
+                <li><a href="${profileData.socialMedia.github}" target="_blank">GitHub</a></li>
+                <li><a href="${profileData.socialMedia.reddit}" target="_blank">Reddit Post</a></li>`;
+            document.getElementById("social-media").innerHTML = socialMediaLinks;
+        }
+
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('show');
+            this.classList.toggle('bx-menu');
+            this.classList.toggle('bx-x');
+        });
+
+        document.addEventListener("DOMContentLoaded", populateProfile);
+    </script>
+
+</body>
+</html>
